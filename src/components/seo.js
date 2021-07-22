@@ -6,9 +6,11 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
+
+import { graphql, useStaticQuery } from "gatsby"
+
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 function Seo({ description, lang, meta, title }) {
   const { site } = useStaticQuery(

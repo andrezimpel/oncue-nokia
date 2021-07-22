@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+}
+
+.headline {
+  margin-bottom: 24px;
+  max-width: 300px;
+}
+
+.phone {
+  position: relative;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  left: calc(50% - 95px);
+  height: 140px;
+  position: absolute;
+  top: 180px;
+  width: 190px;
+  z-index: 2;
+}
+
+.menuItem {
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
+  padding: 8px;
+}
+
+.icon {
+  max-height: 33px;
+  max-width: 100%;
+}
+
+.label {
+  height: 12px;
+  max-width: 100%;
+}
