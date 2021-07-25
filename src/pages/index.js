@@ -1,5 +1,5 @@
 import { AudioPlayerProvider, useAudioPlayer } from "react-use-audio-player"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { button, buttons, cancel, headline, icon, label, menu, menuItem, phone, phoneImage, phoneWrapper, screen, wrapper } from './index.module.scss'
 
 import Layout from "../components/layout"
