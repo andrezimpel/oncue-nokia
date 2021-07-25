@@ -1,3 +1,8 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_reboot.scss";
+
 .wrapper {
   position: relative;
 }
@@ -5,6 +10,10 @@
 .headline {
   margin-bottom: 24px;
   max-width: 300px;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 
 .phoneWrapper {
@@ -12,7 +21,15 @@
   position: relative;
   max-height: 70vh;
   max-width: 600px;
-  width: 90vw;
+  width: 75vw;
+
+  @include media-breakpoint-up(md) {
+    max-width: 280px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 340px;
+  }
 }
 
 .phone {
