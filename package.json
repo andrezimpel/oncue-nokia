@@ -20,6 +20,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-use-audio-player": "^1.2.4",
     "sass": "^1.35.2"
   },
   "devDependencies": {
