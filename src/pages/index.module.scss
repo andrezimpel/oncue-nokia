@@ -7,8 +7,20 @@
   max-width: 300px;
 }
 
-.phone {
+.phoneWrapper {
+  padding-top: 226.06444189%;
   position: relative;
+  max-height: 70vh;
+  max-width: 50vw;
+  width: 100vw;
+}
+
+.phone {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .screen {

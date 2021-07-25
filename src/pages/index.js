@@ -1,6 +1,6 @@
 import { AudioPlayerProvider, useAudioPlayer } from "react-use-audio-player"
 import React, { useEffect, useState } from "react"
-import { button, buttons, cancel, headline, icon, label, menu, menuItem, phone, phoneImage, screen, wrapper } from './index.module.scss'
+import { button, buttons, cancel, headline, icon, label, menu, menuItem, phone, phoneImage, phoneWrapper, screen, wrapper } from './index.module.scss'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -99,27 +99,29 @@ const IndexPage = () => {
       <Seo title="Home"/>
       <div className={wrapper}>
         <img className={headline} src={headlineImage} alt="Take my phone"/>
-        <div className={phone}>
-          <div className={screen}>
-            {content}
+        <div className={phoneWrapper}>
+          <div className={phone}>
+            <div className={screen}>
+              {content}
+            </div>
+            <button className={cancel} onClick={() => setShowSnake(false)}>
+              Cancel
+            </button>
+            <div className={buttons}>
+              <button id="btnLeft" className={button} data-direction="left">left</button>
+              <button id="btnRight" className={button} data-direction="right">right</button>
+              <button id="btnTop" className={button} data-direction="top">top</button>
+              <button id="btnBottom" className={button} data-direction="bottom">bottom</button>
+            </div>
+            <StaticImage
+              src="../images/phone.jpg"
+              width={700}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="ONUE Phone"
+              className={phoneImage}
+            />
           </div>
-          <button className={cancel} onClick={() => setShowSnake(false)}>
-            Cancel
-          </button>
-          <div className={buttons}>
-            <button id="btnLeft" className={button} data-direction="left">left</button>
-            <button id="btnRight" className={button} data-direction="right">right</button>
-            <button id="btnTop" className={button} data-direction="top">top</button>
-            <button id="btnBottom" className={button} data-direction="bottom">bottom</button>
-          </div>
-          <StaticImage
-            src="../images/phone.jpg"
-            width={700}
-            quality={95}
-            formats={["AUTO", "WEBP", "AVIF"]}
-            alt="ONUE Phone"
-            className={phoneImage}
-          />
         </div>
       </div>
     </Layout>
