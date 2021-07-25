@@ -423,10 +423,6 @@ class SnakeGame extends React.Component {
             background: this.state.appleColor,
           }}
         />
-        <div id='Score' className={styles.score} style={{ fontSize: this.state.width / 20 }}>
-          HIGH-SCORE: {this.state.highScore}&ensp;&ensp;&ensp;&ensp;SCORE:{' '}
-          {this.state.score}
-        </div>
       </div>
     )
   }
