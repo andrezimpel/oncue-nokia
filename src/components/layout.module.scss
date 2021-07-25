@@ -11,9 +11,10 @@ html, .main {
   background-color: var(--red);
   color: white;
   height: 100vh;
-  width: 100%;
+  overflow: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
 }
 
 .aligner {

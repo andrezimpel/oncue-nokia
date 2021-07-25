@@ -1,6 +1,6 @@
 import { AudioPlayerProvider, useAudioPlayer } from "react-use-audio-player"
 import React, { useEffect, useState } from "react"
-import { headline, icon, label, menu, menuItem, phone, wrapper } from './index.module.scss'
+import { headline, icon, label, menu, menuItem, phone, phoneImage, wrapper } from './index.module.scss'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -33,7 +33,8 @@ const IndexPage = () => {
   const { togglePlayPause, playing } = useAudioPlayer({
     src: snippet,
     format: "mp3",
-    autoplay: false,
+    html5: true,
+    autoplay: false
   })
 
   const menuItems = [
@@ -95,6 +96,7 @@ const IndexPage = () => {
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="ONUE Phone"
+            className={phoneImage}
           />
         </div>
       </div>
