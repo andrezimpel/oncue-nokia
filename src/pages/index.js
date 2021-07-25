@@ -83,15 +83,15 @@ const IndexPage = () => {
               const Tag = item.onClick ? 'button' : 'a'
               return (
                 <Tag key={index} href={item.to} onClick={item.onClick} className={menuItem}>
-                  <img className={icon} src={item.icon} alt={item.label}/>
                   <img className={label} src={item.labelImage} alt={item.label}/>
+                  <img className={icon} src={item.icon} alt={item.label}/>
                 </Tag>
               )
             })}
           </div>
           <StaticImage
             src="../images/phone.jpg"
-            width={300}
+            width={700}
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="ONUE Phone"
