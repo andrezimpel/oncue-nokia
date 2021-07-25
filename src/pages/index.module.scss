@@ -11,16 +11,21 @@
   position: relative;
 }
 
-.menu {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
+.screen {
   left: 16.5%;
   height: 20%;
   position: absolute;
   top: 27%;
   width: 68%;
   z-index: 2;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .menuItem {
@@ -45,4 +50,51 @@
 
 .label {
   height: 14%;
+}
+
+.cancel {
+  background-color: transparent;
+  border: none;
+  height: 8%;
+  left: 15%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-indent: -9999px;
+  top: 55%;
+  width: 20%;
+  z-index: 2;
+}
+
+.buttons {
+
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+	height: 6%;
+	position: absolute;
+  text-indent: -9999px;
+	width: 22%;
+  z-index: 2;
+
+	&[data-direction="left"] {
+		left: 11%;
+		top: 72%;
+	}
+	&[data-direction="right"] {
+    right: 11%;
+		top: 72%;
+	}
+
+	&[data-direction="top"] {
+    left: 40%;
+		top: 67%;
+	}
+
+	&[data-direction="bottom"] {
+    left: 40%;
+		top: 81%;
+	}
 }

@@ -1,9 +1,10 @@
 import { AudioPlayerProvider, useAudioPlayer } from "react-use-audio-player"
 import React, { useEffect, useState } from "react"
-import { headline, icon, label, menu, menuItem, phone, phoneImage, wrapper } from './index.module.scss'
+import { button, buttons, cancel, headline, icon, label, menu, menuItem, phone, phoneImage, screen, wrapper } from './index.module.scss'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Snake from '../components/snake'
 import { StaticImage } from "gatsby-plugin-image"
 import appleIcon from '../images/menu/apple-icon.svg'
 import audioOffIcon from '../images/menu/audio-off-icon.svg'
@@ -30,6 +31,7 @@ const Index = () => {
 }
 
 const IndexPage = () => {
+  const [showSnake, setShowSnake] = useState(false)
   const { togglePlayPause, playing } = useAudioPlayer({
     src: snippet,
     format: "mp3",
@@ -53,7 +55,8 @@ const IndexPage = () => {
     {
       icon: snakeIcon,
       labelImage: snakeLabel,
-      label: "Play Snake"
+      label: "Play Snake",
+      onClick: () => setShowSnake(!showSnake)
     },
     {
       icon: playing ? audioOffIcon : audioOnIcon,
@@ -64,14 +67,32 @@ const IndexPage = () => {
     {
       icon: spotifyIcon,
       labelImage: preSaveLabel,
-      label: "Pre-Save"
+      label: "Pre-Save",
+      to: "https://accounts.spotify.com/authorize?response_type=code&client_id=5a14783d79444ee9babd9176b256979e&scope=user-follow-modify+user-library-modify+playlist-modify-public+playlist-modify-private+user-read-email+user-read-private&redirect_uri=https%3A%2F%2Flnk.to%2F%7E%2Fprerelease%2Fspotify&state=bFVybD1sbmsudG8lMkZ0YWtlbXlwaG9uZXByZXNhdmUmc0lkPWYwZWI5NjU1LWIxZGUtNDlhNi1iODhkLTdmZTRhZTExYWE1NSZ0SWQ9YWZlNTYyN2YtMTc4ZC00OTAzLTkwYmUtM2ViZTJlODgxMzlkJnU9aHR0cHMlM0ElMkYlMkZsbmsudG8lMkZ0YWtlbXlwaG9uZXByZXNhdmUmdnQ9ZmVjZDFkZDBjODhiMjA1NTlhMTgwNWZkNWZmMTVjNmImdnU9NjBmZDMzZWZkZDEzNDEuNjU0NTYzODQ%3D"
     },
     {
       icon: appleIcon,
       labelImage: preSaveLabel,
-      label: "Pre-Save"
+      label: "Pre-Save",
+      href: "https://lnk.to/takemyphonepresave"
     }
   ]
+
+  const content = showSnake ? (
+    <Snake/>
+  ) : (
+    <div className={menu}>
+      {menuItems.map((item, index) => {
+        const Tag = item.onClick ? 'button' : 'a'
+        return (
+          <Tag key={index} href={item.to} onClick={item.onClick} className={menuItem}>
+            <img className={label} src={item.labelImage} alt={item.label}/>
+            <img className={icon} src={item.icon} alt={item.label}/>
+          </Tag>
+        )
+      })}
+    </div>
+  )
 
   return (
     <Layout>
@@ -79,16 +100,17 @@ const IndexPage = () => {
       <div className={wrapper}>
         <img className={headline} src={headlineImage} alt="Take my phone"/>
         <div className={phone}>
-          <div className={menu}>
-            {menuItems.map((item, index) => {
-              const Tag = item.onClick ? 'button' : 'a'
-              return (
-                <Tag key={index} href={item.to} onClick={item.onClick} className={menuItem}>
-                  <img className={label} src={item.labelImage} alt={item.label}/>
-                  <img className={icon} src={item.icon} alt={item.label}/>
-                </Tag>
-              )
-            })}
+          <div className={screen}>
+            {content}
+          </div>
+          <button className={cancel} onClick={() => setShowSnake(false)}>
+            Cancel
+          </button>
+          <div className={buttons}>
+            <button id="btnLeft" className={button} data-direction="left">left</button>
+            <button id="btnRight" className={button} data-direction="right">right</button>
+            <button id="btnTop" className={button} data-direction="top">top</button>
+            <button id="btnBottom" className={button} data-direction="bottom">bottom</button>
           </div>
           <StaticImage
             src="../images/phone.jpg"
