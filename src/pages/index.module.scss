@@ -5,7 +5,7 @@
 
 @mixin headline {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 20px);
   z-index: 2;
 
   img {
