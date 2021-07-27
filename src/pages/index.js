@@ -62,7 +62,7 @@ const IndexPage = () => {
     {
       icon: appleIcon,
       label: "Pre-Save",
-      href: "https://lnk.to/takemyphonepresave"
+      to: "https://lnk.to/takemyphonepresave"
     }
   ]
 
