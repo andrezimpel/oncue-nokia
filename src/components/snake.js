@@ -400,7 +400,6 @@ class SnakeGame extends React.Component {
           return (
             <div
               key={index}
-              className='Block'
               className={styles.block}
               style={{
                 width: this.state.blockWidth,
@@ -413,7 +412,6 @@ class SnakeGame extends React.Component {
           )
         })}
         <div
-          className='Block'
           className={styles.block}
           style={{
             width: this.state.blockWidth,

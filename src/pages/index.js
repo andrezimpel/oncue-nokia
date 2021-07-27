@@ -73,7 +73,7 @@ const IndexPage = () => {
       {menuItems.map((item, index) => {
         const Tag = item.onClick ? 'button' : 'a'
         return (
-          <Tag key={index} href={item.to} onClick={item.onClick} className={menuItem}>
+          <Tag key={index} href={item.to} onClick={item.onClick} className={menuItem} target="_blank">
             <img className={icon} src={item.icon} alt={item.label}/>
           </Tag>
         )
