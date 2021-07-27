@@ -9,7 +9,7 @@
   z-index: 2;
 
   img {
-    width: 360px;
+    width: 260px;
   }
 }
 
@@ -20,7 +20,7 @@
 .headlineLeft {
   @include headline;
 
-  left: -205px;
+  left: -150px;
 
   img {
     transform: rotate(-90deg);
@@ -30,7 +30,7 @@
 .headlineRight {
   @include headline;
 
-  right: -205px;
+  right: -150px;
 
   img {
     transform: rotate(90deg);
@@ -40,10 +40,10 @@
 .phoneWrapper {
   padding-top: 226.06444189%;
   position: relative;
-  margin-top: 2vh;
+  margin-top: 1vh;
   max-height: 70vh;
   max-width: 600px;
-  width: 68vw;
+  width: 74vw;
 
   @include media-breakpoint-up(md) {
     max-width: 280px;
