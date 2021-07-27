@@ -12,7 +12,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 
-function Seo({ description, lang, meta, title }) {
+function Seo({ description, lang, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,13 +28,14 @@ function Seo({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const title = 'Take My Phone - 8/11'
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={'Take My Phone - 8/11'}
+      title={title}
       meta={[
         {
           name: `description`,

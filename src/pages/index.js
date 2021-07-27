@@ -57,7 +57,7 @@ const IndexPage = () => {
     {
       icon: spotifyIcon,
       label: "Pre-Save",
-      to: "https://accounts.spotify.com/authorize?response_type=code&client_id=5a14783d79444ee9babd9176b256979e&scope=user-follow-modify+user-library-modify+playlist-modify-public+playlist-modify-private+user-read-email+user-read-private&redirect_uri=https%3A%2F%2Flnk.to%2F%7E%2Fprerelease%2Fspotify&state=bFVybD1sbmsudG8lMkZ0YWtlbXlwaG9uZXByZXNhdmUmc0lkPWYwZWI5NjU1LWIxZGUtNDlhNi1iODhkLTdmZTRhZTExYWE1NSZ0SWQ9YWZlNTYyN2YtMTc4ZC00OTAzLTkwYmUtM2ViZTJlODgxMzlkJnU9aHR0cHMlM0ElMkYlMkZsbmsudG8lMkZ0YWtlbXlwaG9uZXByZXNhdmUmdnQ9ZmVjZDFkZDBjODhiMjA1NTlhMTgwNWZkNWZmMTVjNmImdnU9NjBmZDMzZWZkZDEzNDEuNjU0NTYzODQ%3D"
+      to: "https://smarturl.it/takemyphonepresave"
     },
     {
       icon: appleIcon,
