@@ -1,6 +1,6 @@
 import { AudioPlayerProvider, useAudioPlayer } from "react-use-audio-player"
 import React, { useState } from "react"
-import { button, buttons, cancel, headline, icon, menu, menuItem, phone, phoneImage, phoneWrapper, screen, wrapper } from './index.module.scss'
+import { button, buttons, cancel, headlineLeft, headlineRight, icon, menu, menuItem, phone, phoneImage, phoneWrapper, screen, wrapper } from './index.module.scss'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -85,7 +85,9 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home"/>
       <div className={wrapper}>
-        <img className={headline} src={headlineImage} alt="Take my phone"/>
+        <div className={headlineLeft}>
+          <img src={headlineImage} alt="Take my phone"/>
+        </div>
         <div className={phoneWrapper}>
           <div className={phone}>
             <div className={screen}>
@@ -109,6 +111,9 @@ const IndexPage = () => {
               className={phoneImage}
             />
           </div>
+        </div>
+        <div className={headlineRight}>
+          <img src={headlineImage} alt="Take my phone"/>
         </div>
       </div>
     </Layout>

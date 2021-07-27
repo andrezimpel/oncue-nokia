@@ -3,25 +3,47 @@
 @import "~bootstrap/scss/_mixins.scss";
 @import "~bootstrap/scss/_reboot.scss";
 
+@mixin headline {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  img {
+    width: 360px;
+  }
+}
+
 .wrapper {
   position: relative;
 }
 
-.headline {
-  margin-bottom: 24px;
-  max-width: 300px;
+.headlineLeft {
+  @include headline;
 
-  @include media-breakpoint-down(sm) {
-    display: none;
+  left: -205px;
+
+  img {
+    transform: rotate(-90deg);
+  }
+}
+
+.headlineRight {
+  @include headline;
+
+  right: -205px;
+
+  img {
+    transform: rotate(90deg);
   }
 }
 
 .phoneWrapper {
   padding-top: 226.06444189%;
   position: relative;
+  margin-top: 2vh;
   max-height: 70vh;
   max-width: 600px;
-  width: 75vw;
+  width: 68vw;
 
   @include media-breakpoint-up(md) {
     max-width: 280px;
