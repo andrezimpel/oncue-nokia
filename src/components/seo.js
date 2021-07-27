@@ -28,7 +28,7 @@ function Seo({ description, lang, meta }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const title = 'Take My Phone - 8/11'
+  const title = 'Take My Phone | 8/11'
 
   return (
     <Helmet
